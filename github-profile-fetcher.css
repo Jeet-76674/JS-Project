@@ -1,0 +1,146 @@
+:root {
+  --bg-gradient: radial-gradient(circle at 20% 20%, #00d1ff33, transparent 40%), radial-gradient(circle at 80% 10%, #7a5cff55, transparent 35%), linear-gradient(135deg, #090b1f 0%, #14192f 100%);
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: var(--bg-gradient);
+  color: #fff;
+  overflow-x: hidden;
+}
+
+.animated-bg {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.15) 2px, transparent 2px);
+  background-size: 40px 40px;
+  opacity: 0.3;
+  animation: drift 30s linear infinite;
+}
+
+@keyframes drift {
+  from { transform: translateY(0); }
+  to { transform: translateY(-40px); }
+}
+
+.glass-card {
+  backdrop-filter: blur(14px);
+  background: rgba(20, 27, 46, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.5rem;
+}
+
+.gradient-text {
+  background: linear-gradient(90deg, #56ccf2, #bb6bd9);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.suggestion-title {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.95rem;
+}
+
+.suggestion-btn {
+  border-radius: 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #f8fbff;
+  background: rgba(255, 255, 255, 0.06);
+  padding: 0.35rem 0.8rem;
+  transition: all 0.2s ease;
+}
+
+.suggestion-btn:hover {
+  transform: translateY(-1px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.profile-card {
+  background: linear-gradient(150deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.02));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.2);
+  object-fit: cover;
+}
+
+.stat-box {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  padding: 0.75rem;
+  text-align: center;
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.stat-label {
+  font-size: 0.76rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.stat-value {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+
+.stat-location {
+  font-size: 0.95rem;
+  line-height: 1.25;
+  word-break: break-word;
+  display: block;
+  max-width: 100%;
+}
+
+[data-bs-theme='light'] body {
+  color: #111;
+  --bg-gradient: radial-gradient(circle at 20% 20%, #7ed6ff88, transparent 40%), radial-gradient(circle at 80% 10%, #d7a2ff88, transparent 35%), linear-gradient(135deg, #f8fbff 0%, #e7f0ff 100%);
+}
+
+[data-bs-theme='light'] .glass-card,
+[data-bs-theme='light'] .profile-card,
+[data-bs-theme='light'] .stat-box {
+  background: rgba(255, 255, 255, 0.75);
+  border-color: rgba(17, 17, 17, 0.08);
+}
+
+[data-bs-theme='light'] .suggestion-title {
+  color: rgba(17, 17, 17, 0.7);
+}
+
+[data-bs-theme='light'] .suggestion-btn {
+  color: #334155;
+  background: rgba(255, 255, 255, 0.8);
+  border-color: rgba(51, 65, 85, 0.35);
+}
+
+[data-bs-theme='light'] .suggestion-btn:hover {
+  background: rgba(148, 163, 184, 0.2);
+}
+
+[data-bs-theme='light'] .stat-label {
+  color: rgba(17, 17, 17, 0.7);
+}
+
+[data-bs-theme='light'] .stat-location {
+  color: #1f2937;
+}
+
+[data-bs-theme='light'] #profileLink {
+  color: #111;
+  border-color: rgba(17, 17, 17, 0.3);
+}
